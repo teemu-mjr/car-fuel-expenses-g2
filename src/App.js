@@ -1,14 +1,15 @@
 import "./App.css";
-import History from "./components/History";
-import FuelingTotal from "./components/FuelingTotal";
-import AddExpense from "./components/AddExpense";
+import { History } from "./components/History";
+import { FuelingTotal } from "./components/FuelingTotal";
+import { AddExpense } from "./components/AddExpense";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>Fueling site</h1>
-      <FuelingTotal km={100} liter={100} price={10} />
-      <History carHistoryList={[0, 1, 2, 3]} />
+      <Header />
+      <FuelingTotal />
+      <History />
       <AddExpense />
     </div>
   );

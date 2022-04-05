@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddExpense() {
+export const AddExpense = () => {
   return (
     <div className="AddExpense">
       <h1>Add a new expense</h1>
@@ -13,6 +13,4 @@ function AddExpense() {
       </div>
     </div>
   );
-}
-
-export default AddExpense;
+};

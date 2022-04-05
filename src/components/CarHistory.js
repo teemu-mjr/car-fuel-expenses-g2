@@ -1,6 +1,6 @@
 import React from "react";
 
-function CarHistory({ price, liter, km }) {
+export const CarHistory = ({ price, liter, km }) => {
   return (
     <div className="CarHistory">
       <div>
@@ -12,6 +12,4 @@ function CarHistory({ price, liter, km }) {
       </div>
     </div>
   );
-}
-
-export default CarHistory;
+};

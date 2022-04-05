@@ -1,6 +1,6 @@
 import React from "react";
 
-function FuelingTotal({ price, liter, km }) {
+export const FuelingTotal = ({ price, liter, km }) => {
   return (
     <div className="FuelingTotal">
       <h1>Fueling total</h1>
@@ -12,6 +12,4 @@ function FuelingTotal({ price, liter, km }) {
       </div>
     </div>
   );
-}
-
-export default FuelingTotal;
+};
