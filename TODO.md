@@ -31,7 +31,7 @@
 - [ ] The application is divided into components (2 points)
 - [ ] The components are functional components (2 points)
 - [ ] The totals are calculated for each individual car (6 points)
-- [ ] React hooks are used (3 points)
+- [x] React hooks are used (3 points)
 - [ ] Context API is used manage state (2 points)
 - [ ] The application functions without exceptions (2 points)
 - [ ] The application is styled with css and looks good and specific (3 points)

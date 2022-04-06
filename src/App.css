@@ -1,8 +1,16 @@
+/* GLOBAL */
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   /* for debugging */
   border-style: dashed;
@@ -18,7 +26,7 @@
   color: firebrick;
 }
 
-.AddExpenseInputs {
+.AddExpenseForm {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -27,6 +35,7 @@
 .FuelingTotal {
   display: flex;
   flex-direction: column;
+  text-align: center;
   width: 80vw;
   /* for debugging */
   border-style: dashed;
