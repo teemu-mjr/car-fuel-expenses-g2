@@ -1,7 +1,7 @@
 import React from "react";
 import { CarHistory } from "./CarHistory";
 
-export const History = ({ carHistoryList = [] }) => {
+export const History = () => {
   return (
     <div className="History">
       <h3>History of cars</h3>

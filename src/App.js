@@ -4,14 +4,18 @@ import { FuelingTotal } from "./components/FuelingTotal";
 import { AddExpense } from "./components/AddExpense";
 import { Header } from "./components/Header";
 
+import { GlobalProvider } from "./context/GlobalState";
+
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider className="App">
       <Header />
-      <FuelingTotal />
-      <History />
-      <AddExpense />
-    </div>
+      <div className="AppContainer">
+        <FuelingTotal />
+        <History />
+        <AddExpense />
+      </div>
+    </GlobalProvider>
   );
 }
 
