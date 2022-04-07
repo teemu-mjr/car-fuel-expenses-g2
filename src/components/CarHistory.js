@@ -1,15 +1,19 @@
 import React from "react";
 
-export const CarHistory = ({ price, liter, km }) => {
+export const CarHistory = ({ fuelingExpenses }) => {
   return (
-    <div className="CarHistory">
-      <div>
-        Car name
-        {price} €{liter}liters
-        {km} kilometers
-        {price / km} €/km
-        {liter / km} l/km
-      </div>
-    </div>
+    <li className="CarHistory">
+      {fuelingExpenses.carName}
+      <br></br>
+      {fuelingExpenses.price + " €"}
+      <br></br>
+      {fuelingExpenses.kilometers + " km"}
+      <br></br>
+      {fuelingExpenses.liters + " l"}
+      <br></br>
+      {fuelingExpenses.kilometers / fuelingExpenses.liters + " km/l"}
+      <br></br>
+      {fuelingExpenses.price / fuelingExpenses.kilometers + " €/km"}
+    </li>
   );
 };

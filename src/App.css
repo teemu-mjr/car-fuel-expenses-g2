@@ -1,4 +1,7 @@
 /* GLOBAL */
+html {
+  background-color: #333;
+}
 
 input {
   width: 100%;
@@ -6,6 +9,8 @@ input {
   margin: 8px 0;
   box-sizing: border-box;
 }
+
+/* COMPONENTS */
 
 .App {
   display: flex;
@@ -53,8 +58,22 @@ input {
 }
 
 .CarHistory {
-  width: 80%;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+
   /* for debugging */
   border-style: dashed;
   color: blueviolet;
+}
+
+.CarHistory li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
 }

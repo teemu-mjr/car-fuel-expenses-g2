@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
-export const FuelingTotal = ({ price, liter, km }) => {
+export const FuelingTotal = () => {
+  const { fuelingTotal } = useContext(GlobalContext);
+
   return (
     <div className="FuelingTotal">
       <h1>Fueling total</h1>
-      <div>
-        {price} €{liter}liters
-        {km} kilometers
-        {price / km} €/km
-        {liter / km} l/km
-      </div>
+      <h3>{fuelingTotal.liters} l</h3>
+      <h3>{fuelingTotal.price} €</h3>
+      <h3>{fuelingTotal.kilometers} km</h3>
     </div>
   );
 };
