@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 export const CarHistory = ({ fuelingExpenses }) => {
+  const { deleteExpense } = useContext(GlobalContext);
+
   return (
     <li className="CarHistory">
       {fuelingExpenses.carName}
@@ -14,6 +17,7 @@ export const CarHistory = ({ fuelingExpenses }) => {
       {fuelingExpenses.kilometers / fuelingExpenses.liters + " km/l"}
       <br></br>
       {fuelingExpenses.price / fuelingExpenses.kilometers + " €/km"}
+      <button onClick={() => deleteExpense(fuelingExpenses.id)}>Delete</button>
     </li>
   );
 };

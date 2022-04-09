@@ -21,6 +21,11 @@ input {
   border-style: dashed;
 }
 
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .AddExpense {
   display: flex;
   flex-direction: column;
