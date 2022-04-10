@@ -1,0 +1,62 @@
+{
+  "title": "",
+  "tasks": [
+    {
+      "text": "style AddExpense",
+      "priority": "low",
+      "creation": 1649611425
+    },
+    {
+      "text": "style CarHistory",
+      "priority": "low",
+      "creation": 1649611615
+    },
+    {
+      "text": "style header",
+      "priority": "low",
+      "creation": 1649611653
+    },
+    {
+      "text": "layout of the components",
+      "priority": "medium",
+      "creation": 1649611692
+    },
+    {
+      "text": "adding new expenses",
+      "priority": "high",
+      "creation": 1649611745,
+      "completion": 1649615086
+    },
+    {
+      "text": "saving the expeses to a db",
+      "priority": "verylow",
+      "creation": 1649611772
+    },
+    {
+      "text": "style History",
+      "priority": "low",
+      "creation": 1649611825
+    },
+    {
+      "text": "style FuelingTotal",
+      "priority": "low",
+      "creation": 1649611849
+    },
+    {
+      "text": "calculating expenses of one car together",
+      "priority": "high",
+      "creation": 1649611919,
+      "completion": 1649615096
+    },
+    {
+      "text": "calculating expenses of all the cars together",
+      "priority": "high",
+      "creation": 1649611930
+    },
+    {
+      "text": "add a log of transactions",
+      "priority": "low",
+      "creation": 1649613938
+    }
+  ]
+}

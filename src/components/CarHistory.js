@@ -10,14 +10,16 @@ export const CarHistory = ({ fuelingExpenses }) => {
       <br></br>
       {fuelingExpenses.price + " €"}
       <br></br>
-      {fuelingExpenses.kilometers + " km"}
+      {fuelingExpenses.kilometer + " km"}
       <br></br>
-      {fuelingExpenses.liters + " l"}
+      {fuelingExpenses.liter + " l"}
       <br></br>
-      {fuelingExpenses.kilometers / fuelingExpenses.liters + " km/l"}
+      {(fuelingExpenses.kilometer / fuelingExpenses.liter).toFixed(2) + " km/l"}
       <br></br>
-      {fuelingExpenses.price / fuelingExpenses.kilometers + " €/km"}
-      <button onClick={() => deleteExpense(fuelingExpenses.id)}>Delete</button>
+      {(fuelingExpenses.price / fuelingExpenses.kilometer).toFixed(4) + " €/km"}
+      <button onClick={() => deleteExpense(fuelingExpenses.carName)}>
+        Delete
+      </button>
     </li>
   );
 };

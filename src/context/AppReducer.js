@@ -4,7 +4,7 @@ export default (state, action) => {
       return {
         ...state,
         fuelingExpenses: state.fuelingExpenses.filter(
-          (e) => e.id !== action.payload
+          (e) => e.carName !== action.payload
         ),
       };
 

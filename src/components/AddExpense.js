@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 export const AddExpense = () => {
   const [liter, setLiter] = useState(0);
@@ -6,10 +7,37 @@ export const AddExpense = () => {
   const [kilometer, setKilometer] = useState(0);
   const [carName, setCarName] = useState("");
 
+  const { createExpense, deleteExpense, fuelingExpenses } =
+    useContext(GlobalContext);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    const newExpence = {
+      liter: +liter,
+      price: +price,
+      kilometer: +kilometer,
+      carName,
+    };
+
+    if (fuelingExpenses.find((expense) => expense.carName === carName)) {
+      let savedExpense = fuelingExpenses.find(
+        (expense) => expense.carName === carName
+      );
+      deleteExpense(savedExpense.carName);
+      savedExpense.liter += parseFloat(liter);
+      savedExpense.price += parseFloat(price);
+      savedExpense.kilometer += parseFloat(kilometer);
+      createExpense(savedExpense);
+    } else {
+      createExpense(newExpence);
+    }
+  };
+
   return (
     <div className="AddExpense">
       <h1>Add a new expense</h1>
-      <form className="AddExpenseForm">
+      <form onSubmit={onSubmit} className="AddExpenseForm">
         <label htmlFor="liters-input">Liters</label>
         <input
           type="number"

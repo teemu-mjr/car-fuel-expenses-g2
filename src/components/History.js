@@ -11,7 +11,7 @@ export const History = () => {
       <ul className="list">
         {fuelingExpenses.map((fuelingExpenses) => (
           <CarHistory
-            key={fuelingExpenses.id}
+            key={fuelingExpenses.carName}
             fuelingExpenses={fuelingExpenses}
           />
         ))}

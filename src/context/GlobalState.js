@@ -2,13 +2,8 @@ import React, { createContext, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
 const initialState = {
-  fuelingExpenses: [
-    { id: 1, liters: 10, price: 20, kilometers: 100, carName: "BMW" },
-    { id: 2, liters: 12, price: 53, kilometers: 134, carName: "VW" },
-    { id: 3, liters: 50, price: 12, kilometers: 634, carName: "FIAT" },
-    { id: 4, liters: 32, price: 54, kilometers: 123, carName: "LADA" },
-  ],
-  fuelingTotal: { liters: 10, price: 20, kilometers: 100 },
+  fuelingExpenses: [],
+  fuelingTotal: { liters: 0, price: 0, kilometers: 0 },
 };
 
 export const GlobalContext = createContext(initialState);
@@ -17,14 +12,14 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
   // actions
-  const deleteExpense = (id) => {
+  const deleteExpense = (carName) => {
     dispatch({
       type: "DELETE_EXPENSE",
-      payload: id,
+      payload: carName,
     });
   };
 
-  const addExpense = (expense) => {
+  const createExpense = (expense) => {
     dispatch({
       type: "ADD_EXPENSE",
       payload: expense,
@@ -37,7 +32,7 @@ export const GlobalProvider = ({ children }) => {
         fuelingExpenses: state.fuelingExpenses,
         fuelingTotal: state.fuelingTotal,
         deleteExpense,
-        addExpense,
+        createExpense,
       }}
     >
       {children}
