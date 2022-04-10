@@ -45,7 +45,8 @@
     {
       "text": "calculating expenses of one car together",
       "priority": "high",
-      "creation": 1649611919
+      "creation": 1649611919,
+      "completion": 1649615096
     },
     {
       "text": "calculating expenses of all the cars together",
@@ -56,6 +57,16 @@
       "text": "add a log of transactions",
       "priority": "low",
       "creation": 1649613938
+    },
+    {
+      "text": "restricting illegal input from the user",
+      "priority": "medium",
+      "creation": 1649615169
+    },
+    {
+      "text": "clearing field after submit",
+      "priority": "high",
+      "creation": 1649615500
     }
   ]
 }

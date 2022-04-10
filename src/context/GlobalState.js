@@ -3,7 +3,6 @@ import AppReducer from "./AppReducer";
 
 const initialState = {
   fuelingExpenses: [],
-  fuelingTotal: { liters: 0, price: 0, kilometers: 0 },
 };
 
 export const GlobalContext = createContext(initialState);
