@@ -2,9 +2,9 @@ import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 export const AddExpense = () => {
-  const [liter, setLiter] = useState(0);
-  const [price, setPrice] = useState(0);
-  const [kilometer, setKilometer] = useState(0);
+  const [liter, setLiter] = useState("");
+  const [price, setPrice] = useState("");
+  const [kilometer, setKilometer] = useState("");
   const [carName, setCarName] = useState("");
 
   const { createExpense, deleteExpense, fuelingExpenses } =
@@ -32,6 +32,15 @@ export const AddExpense = () => {
     } else {
       createExpense(newExpence);
     }
+
+    clearFields();
+  };
+
+  const clearFields = () => {
+    setLiter("");
+    setPrice("");
+    setKilometer("");
+    setCarName("");
   };
 
   return (

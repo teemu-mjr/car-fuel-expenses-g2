@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import AppReducer from "./AppReducer";
+import { reducer } from "./AppReducer";
 
 const initialState = {
   fuelingExpenses: [],
@@ -8,7 +8,7 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   // actions
   const deleteExpense = (carName) => {
