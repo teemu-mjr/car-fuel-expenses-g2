@@ -1,56 +1,6 @@
-/* GLOBAL */
-html {
-  background-color: #333;
-}
-
-/* COMPONENTS */
-
 .App {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.AppContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-.AddExpense {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.AddExpenseForm {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.History {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.CarHistory {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 40px;
-}
-
-.CarHistory li {
-  background-color: #fff;
-  box-shadow: var(--box-shadow);
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding: 10px;
-  margin: 10px 0;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  min-height: 100vh;
+  height: 100%;
 }

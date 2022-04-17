@@ -4,7 +4,8 @@
     {
       "text": "style AddExpense",
       "priority": "low",
-      "creation": 1649611425
+      "creation": 1649611425,
+      "completion": 1650230182
     },
     {
       "text": "style CarHistory",
@@ -36,7 +37,8 @@
     {
       "text": "style History",
       "priority": "low",
-      "creation": 1649611825
+      "creation": 1649611825,
+      "completion": 1650232247
     },
     {
       "text": "style FuelingTotal",

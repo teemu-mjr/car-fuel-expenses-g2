@@ -20,15 +20,15 @@ export const FuelingTotal = () => {
   return (
     <div className="d-flex flex-row">
       <div className="card bg-dark text-center m-2">
-        <h3 className="card-title text-light">Total liters</h3>
+        <div className="card-header text-light">Total liters</div>
         <p className="card-text text-light">{calculateTotal().liter} l</p>
       </div>
       <div className="card bg-dark text-center m-2">
-        <h3 className="card-title text-light">Total price</h3>
+        <div className="card-header text-light">Total price</div>
         <p className="card-text text-light">{calculateTotal().price} €</p>
       </div>
       <div className="card bg-dark text-center m-2">
-        <h3 className="card-title text-light">Total kilometers</h3>
+        <div className="card-header text-light">Total kilometers</div>
         <p className="card-text text-light">{calculateTotal().kilometer} km</p>
       </div>
     </div>

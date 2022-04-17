@@ -5,21 +5,27 @@ export const CarHistory = ({ fuelingExpenses }) => {
   const { deleteExpense } = useContext(GlobalContext);
 
   return (
-    <li className="CarHistory">
-      {fuelingExpenses.carName}
-      <br></br>
-      {fuelingExpenses.price + " €"}
-      <br></br>
-      {fuelingExpenses.kilometer + " km"}
-      <br></br>
-      {fuelingExpenses.liter + " l"}
-      <br></br>
-      {(fuelingExpenses.kilometer / fuelingExpenses.liter).toFixed(2) + " km/l"}
-      <br></br>
-      {(fuelingExpenses.price / fuelingExpenses.kilometer).toFixed(4) + " €/km"}
-      <button onClick={() => deleteExpense(fuelingExpenses.carName)}>
-        Delete
-      </button>
-    </li>
+    <div className="card bg-dark m-3">
+      <div className="card-header">{fuelingExpenses.carName}</div>
+      <div className="card-body">
+        <p>{fuelingExpenses.price + " €"}</p>
+        <p>{fuelingExpenses.kilometer + " km"}</p>
+        <p>{fuelingExpenses.liter + " l"}</p>
+        <p>
+          {(fuelingExpenses.kilometer / fuelingExpenses.liter).toFixed(2) +
+            " km/l"}
+        </p>
+        <p>
+          {(fuelingExpenses.price / fuelingExpenses.kilometer).toFixed(4) +
+            " €/km"}
+        </p>
+        <button
+          className="btn btn-danger"
+          onClick={() => deleteExpense(fuelingExpenses.carName)}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
   );
 };

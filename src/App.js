@@ -9,12 +9,16 @@ import { GlobalProvider } from "./context/GlobalState";
 function App() {
   return (
     <GlobalProvider>
-      <div className="App">
+      <div className="App d-flex flex-column align-items-center text-center w-100 p-3">
         <Header />
-        <div className="AppContainer">
-          <FuelingTotal />
-          <AddExpense />
-          <History />
+        <div className="d-flex flex-row m-3">
+          <div className="d-flex flex-column align-items-center me-4">
+            <FuelingTotal />
+            <AddExpense />
+          </div>
+          <div>
+            <History />
+          </div>
         </div>
       </div>
     </GlobalProvider>
