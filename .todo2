@@ -41,7 +41,8 @@
     {
       "text": "style FuelingTotal",
       "priority": "low",
-      "creation": 1649611849
+      "creation": 1649611849,
+      "completion": 1650228164
     },
     {
       "text": "calculating expenses of one car together",
