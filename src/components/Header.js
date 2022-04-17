@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Header = () => {
-  return <h1>Fuel expenses</h1>;
+  return (
+    <div>
+      <h1>Fueling</h1>
+    </div>
+  );
 };

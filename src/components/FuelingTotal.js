@@ -18,11 +18,13 @@ export const FuelingTotal = () => {
   };
 
   return (
-    <div className="FuelingTotal">
+    <div>
       <h1>Fueling total</h1>
-      <h3>{calculateTotal().liter} l</h3>
-      <h3>{calculateTotal().price} €</h3>
-      <h3>{calculateTotal().kilometer} km</h3>
+      <div style={{ display: "flex", flexDirection: "row" }}>
+        <h3>{calculateTotal().liter} l</h3>
+        <h3>{calculateTotal().price} €</h3>
+        <h3>{calculateTotal().kilometer} km</h3>
+      </div>
     </div>
   );
 };

@@ -19,7 +19,8 @@
     {
       "text": "layout of the components",
       "priority": "medium",
-      "creation": 1649611692
+      "creation": 1649611692,
+      "completion": 1650212207
     },
     {
       "text": "adding new expenses",
@@ -70,6 +71,11 @@
       "priority": "high",
       "creation": 1649615500,
       "completion": 1649859666
+    },
+    {
+      "text": "mobile support",
+      "priority": "verylow",
+      "creation": 1649859835
     }
   ]
 }
