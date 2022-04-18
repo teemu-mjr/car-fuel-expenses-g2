@@ -90,7 +90,18 @@
     {
       "text": "add routes for index, add expense and list expenses",
       "priority": "medium",
-      "creation": 1650271591
+      "creation": 1650271591,
+      "completion": 1650273397
+    },
+    {
+      "text": "create history",
+      "priority": "medium",
+      "creation": 1650273407
+    },
+    {
+      "text": "create index",
+      "priority": "medium",
+      "creation": 1650273410
     }
   ]
 }
