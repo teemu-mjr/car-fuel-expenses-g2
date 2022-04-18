@@ -13,7 +13,6 @@ export const FuelingLog = () => {
           <FuelingExpense
             key={fuelingExpenses.id}
             fuelingExpenses={fuelingExpenses}
-            deleteKey={fuelingExpenses.id}
           />
         ))}
       </div>

@@ -11,10 +11,10 @@ export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   // actions
-  const deleteExpense = (carName) => {
+  const deleteExpense = (id) => {
     dispatch({
       type: "DELETE_EXPENSE",
-      payload: carName,
+      payload: id,
     });
   };
 

@@ -17,6 +17,8 @@ export const History = () => {
     obj[item.carName]
       ? (obj = mergeExpenses(obj, item))
       : (obj[item.carName] = { ...item });
+
+    item.id = item.carName;
     return obj;
   }, {});
 
@@ -26,12 +28,8 @@ export const History = () => {
     <div className="vw-90">
       <h1>History</h1>
       <div>
-        {carHistory.map((fuelingExpenses) => (
-          <FuelingExpense
-            key={fuelingExpenses.carName}
-            fuelingExpenses={fuelingExpenses}
-            deleteKey={fuelingExpenses.carName}
-          />
+        {carHistory.map((expense) => (
+          <FuelingExpense key={expense.carName} fuelingExpenses={expense} />
         ))}
       </div>
     </div>
