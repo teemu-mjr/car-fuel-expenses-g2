@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
-export const FuelingExpense = ({ fuelingExpenses }) => {
+export const FuelingExpense = ({ fuelingExpenses, deleteKey }) => {
   const { deleteExpense } = useContext(GlobalContext);
 
   return (
-    <div className="card bg-dark m-3">
+    <div className="card bg-dark m-3 w-100">
       <div className="card-header">{fuelingExpenses.carName}</div>
       <div className="card-body">
         <p>{fuelingExpenses.price + " €"}</p>
@@ -21,7 +21,7 @@ export const FuelingExpense = ({ fuelingExpenses }) => {
         </p>
         <button
           className="btn btn-danger"
-          onClick={() => deleteExpense(fuelingExpenses.id)}
+          onClick={() => deleteExpense(deleteKey)}
         >
           Delete
         </button>
