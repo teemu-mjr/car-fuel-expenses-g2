@@ -80,6 +80,17 @@
       "text": "mobile support",
       "priority": "verylow",
       "creation": 1649859835
+    },
+    {
+      "text": "add a expense log",
+      "priority": "medium",
+      "creation": 1650271571,
+      "completion": 1650272367
+    },
+    {
+      "text": "add routes for index, add expense and list expenses",
+      "priority": "medium",
+      "creation": 1650271591
     }
   ]
 }

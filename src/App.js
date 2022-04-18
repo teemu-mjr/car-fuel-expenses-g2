@@ -1,5 +1,5 @@
 import "./App.css";
-import { History } from "./components/History";
+import { FuelingLog } from "./components/FuelingLog";
 import { FuelingTotal } from "./components/FuelingTotal";
 import { AddExpense } from "./components/AddExpense";
 import { Header } from "./components/Header";
@@ -17,7 +17,7 @@ function App() {
             <AddExpense />
           </div>
           <div>
-            <History />
+            <FuelingLog />
           </div>
         </div>
       </div>

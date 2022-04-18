@@ -10,7 +10,8 @@
     {
       "text": "style CarHistory",
       "priority": "low",
-      "creation": 1649611615
+      "creation": 1649611615,
+      "completion": 1650232258
     },
     {
       "text": "style header",
@@ -79,6 +80,16 @@
       "text": "mobile support",
       "priority": "verylow",
       "creation": 1649859835
+    },
+    {
+      "text": "add a expense log",
+      "priority": "medium",
+      "creation": 1650271571
+    },
+    {
+      "text": "add routes for index, add expense and list expenses",
+      "priority": "medium",
+      "creation": 1650271591
     }
   ]
 }

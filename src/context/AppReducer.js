@@ -4,7 +4,7 @@ export const reducer = (state, action) => {
       return {
         ...state,
         fuelingExpenses: state.fuelingExpenses.filter(
-          (e) => e.carName !== action.payload
+          (e) => e.id !== action.payload
         ),
       };
 
