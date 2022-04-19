@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { FuelingExpense } from "./FuelingExpense";
 
@@ -18,7 +18,6 @@ export const History = () => {
       ? (obj = mergeExpenses(obj, item))
       : (obj[item.carName] = { ...item });
 
-    item.id = item.carName;
     return obj;
   }, {});
 
@@ -29,7 +28,11 @@ export const History = () => {
       <h1>History</h1>
       <div>
         {carHistory.map((expense) => (
-          <FuelingExpense key={expense.carName} fuelingExpenses={expense} />
+          <FuelingExpense
+            key={expense.id}
+            fuelingExpenses={expense}
+            byName={true}
+          />
         ))}
       </div>
     </div>

@@ -8,6 +8,14 @@ export const reducer = (state, action) => {
         ),
       };
 
+    case "DELETE_EXPENSE_BY_NAME":
+      return {
+        ...state,
+        fuelingExpenses: state.fuelingExpenses.filter(
+          (e) => e.carName !== action.payload
+        ),
+      };
+
     case "ADD_EXPENSE":
       return {
         ...state,

@@ -8,8 +8,7 @@ export const AddExpense = () => {
   const [kilometer, setKilometer] = useState("");
   const [carName, setCarName] = useState("");
 
-  const { createExpense, deleteExpense, fuelingExpenses } =
-    useContext(GlobalContext);
+  const { createExpense } = useContext(GlobalContext);
 
   const validateForm = () => {
     if (

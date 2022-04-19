@@ -18,6 +18,13 @@ export const GlobalProvider = ({ children }) => {
     });
   };
 
+  const deleteExpenseByName = (carName) => {
+    dispatch({
+      type: "DELETE_EXPENSE_BY_NAME",
+      payload: carName,
+    });
+  };
+
   const createExpense = (expense) => {
     dispatch({
       type: "ADD_EXPENSE",
@@ -32,6 +39,7 @@ export const GlobalProvider = ({ children }) => {
         fuelingTotal: state.fuelingTotal,
         deleteExpense,
         createExpense,
+        deleteExpenseByName,
       }}
     >
       {children}
