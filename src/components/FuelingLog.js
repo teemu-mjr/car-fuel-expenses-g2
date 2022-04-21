@@ -6,7 +6,7 @@ export const FuelingLog = () => {
   const { fuelingExpenses } = useContext(GlobalContext);
 
   return (
-    <div className="d-flex flex-column align-items-center text-center w-100">
+    <div className="d-flex flex-column align-items-center text-center">
       <h3>Fueling expenses log</h3>
       <div>
         {fuelingExpenses.map((fuelingExpenses) => (

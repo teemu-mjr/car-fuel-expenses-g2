@@ -5,7 +5,6 @@ import { FuelingTotal } from "./components/FuelingTotal";
 import { AddExpense } from "./components/AddExpense";
 import { NavBar } from "./components/NavBar";
 import { History } from "./components/History";
-
 import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
@@ -18,7 +17,8 @@ function App() {
             <Route
               path="/"
               element={
-                <div className="App d-flex flex-column align-items-center text-center w-100 p-3"></div>
+                <div className="App d-flex flex-column align-items-center text-center w-100 p-3">
+                </div>
               }
             ></Route>
             <Route

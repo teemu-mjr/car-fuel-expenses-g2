@@ -18,7 +18,7 @@ export const FuelingTotal = () => {
   };
 
   return (
-    <div className="d-flex flex-row">
+    <div className="d-flex justify-content-center flex-row">
       <div className="card bg-dark text-center m-2">
         <div className="card-header text-light">Total liters</div>
         <p className="card-text text-light">{calculateTotal().liter} l</p>

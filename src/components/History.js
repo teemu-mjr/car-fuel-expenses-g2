@@ -24,7 +24,7 @@ export const History = () => {
   const carHistory = Object.values(arrayHashmap);
 
   return (
-    <div className="vw-90">
+    <div style={{width:"100%"}}>
       <h1>History</h1>
       <div>
         {carHistory.map((expense) => (
