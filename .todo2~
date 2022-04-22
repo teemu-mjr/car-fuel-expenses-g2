@@ -62,7 +62,8 @@
     {
       "text": "add a log of transactions",
       "priority": "low",
-      "creation": 1649613938
+      "creation": 1649613938,
+      "completion": 1650662653
     },
     {
       "text": "restricting illegal input from the user",
@@ -96,7 +97,13 @@
     {
       "text": "create history",
       "priority": "medium",
-      "creation": 1650273407
+      "creation": 1650273407,
+      "completion": 1650662647
+    },
+    {
+      "text": "create index",
+      "priority": "medium",
+      "creation": 1650273410
     }
   ]
 }

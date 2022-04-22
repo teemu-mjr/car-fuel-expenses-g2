@@ -18,6 +18,8 @@ function App() {
               path="/"
               element={
                 <div className="App d-flex flex-column align-items-center text-center w-100 p-3">
+                  <h1>Welcome to track your fueling</h1>
+                  <FuelingTotal />
                 </div>
               }
             ></Route>
