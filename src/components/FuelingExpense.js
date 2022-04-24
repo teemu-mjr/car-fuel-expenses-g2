@@ -5,7 +5,7 @@ export const FuelingExpense = ({ fuelingExpenses, byName = false }) => {
   const { deleteExpense, deleteExpenseByName } = useContext(GlobalContext);
 
   return (
-    <div className="card bg-dark m-3 w-100">
+    <div className="card bg-dark m-3">
       <div className="card-header">{fuelingExpenses.carName}</div>
       <div className="card-body">
         <p>{fuelingExpenses.price + " €"}</p>

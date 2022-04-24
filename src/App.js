@@ -12,7 +12,7 @@ function App() {
     <GlobalProvider>
       <BrowserRouter>
         <NavBar />
-        <div className="App d-flex flex-column align-items-center text-center w-100 p-3">
+        <div className="App d-flex flex-column align-items-center">
           <Routes>
             <Route
               path="/"
@@ -23,18 +23,18 @@ function App() {
                     <AddExpense />
                   </div>
                   <div>
-                    <FuelingLog />
+                    <History />
                   </div>
                 </div>
               }
             ></Route>
             <Route
-              path="/history"
+              path="/log"
               element={
                 <div className="d-flex flex-row m-3">
                   <div className="d-flex flex-column align-items-center me-4">
                     <FuelingTotal />
-                    <History />
+                    <FuelingLog />
                   </div>
                 </div>
               }

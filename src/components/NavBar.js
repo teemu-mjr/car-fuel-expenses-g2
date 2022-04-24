@@ -12,8 +12,8 @@ export const NavBar = () => {
           Fueling tracker
         </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link as={Link} to="/history">
-            History
+          <Nav.Link as={Link} to="/log">
+            Log
           </Nav.Link>
         </Nav>
       </Container>
