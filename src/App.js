@@ -17,15 +17,6 @@ function App() {
             <Route
               path="/"
               element={
-                <div className="App d-flex flex-column align-items-center text-center w-100 p-3">
-                  <h1>Welcome to track your fueling</h1>
-                  <FuelingTotal />
-                </div>
-              }
-            ></Route>
-            <Route
-              path="/add"
-              element={
                 <div className="d-flex flex-row m-3">
                   <div className="d-flex flex-column align-items-center me-4">
                     <FuelingTotal />
