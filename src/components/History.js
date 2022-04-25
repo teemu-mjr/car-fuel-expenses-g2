@@ -29,15 +29,24 @@ export const History = () => {
       className="d-flex flex-column justify-content-center text-center"
     >
       <h1>History</h1>
-      <div>
-        {carHistory.map((expense) => (
-          <FuelingExpense
-            key={expense.id}
-            fuelingExpenses={expense}
-            byName={true}
-          />
-        ))}
-      </div>
+      {carHistory.length > 0 ? (
+        <div>
+          {carHistory.map((expense) => (
+            <FuelingExpense
+              key={expense.id}
+              fuelingExpenses={expense}
+              byName={true}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="card bg-dark m-3">
+          <div className="card-body">
+            <p>All of your expenses will be listed here.</p>
+            <p>Please go ahead and add expense with the form!</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

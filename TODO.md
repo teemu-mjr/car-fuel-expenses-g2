@@ -25,16 +25,16 @@
   - average expense per 100 km in euros
   - average consumption per 100 km in liters
 
-# extra points (12)
+# extra points (30)
 
-- [ ] All the requirements are fulfilled (3 points)
+- [x] All the requirements are fulfilled (3 points)
 - [x] The application is divided into components (2 points)
-- [ ] The components are functional components (2 points)
-- [ ] The totals are calculated for each individual car (6 points)
+- [x] The components are functional components (2 points)
+- [x] The totals are calculated for each individual car (6 points)
 - [x] React hooks are used (3 points)
 - [x] Context API is used manage state (2 points)
-- [ ] The application functions without exceptions (2 points)
-- [ ] The application is styled with css and looks good and specific (3 points)
+- [x] The application functions without exceptions (2 points)
+- [x] The application is styled with css and looks good and specific (3 points)
 - [x] Git is used (3 points)
 - [x] create_react_app is used (2 points)
-- [ ] Some additional functionality or features are implemented (2 points)
+- [x] Some additional functionality or features are implemented (2 points)
