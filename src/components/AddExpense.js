@@ -46,8 +46,22 @@ export const AddExpense = () => {
   };
 
   return (
-    <div className="AddExpense">
-      <h1>Add a new expense</h1>
+    <div>
+      <h1 className="text-center">Add a new expense</h1>
+      <div className="input-group mb-3">
+        <span className="input-group-text" id="basic-addon1">
+          Car name
+        </span>
+        <input
+          type="text"
+          className="form-control"
+          aria-describedby="basic-addon1"
+          value={carName}
+          onChange={(e) => {
+            setCarName(e.target.value);
+          }}
+        ></input>
+      </div>
       <div className="input-group mb-3">
         <span className="input-group-text" id="basic-addon1">
           Liters
@@ -88,20 +102,6 @@ export const AddExpense = () => {
           value={kilometer}
           onChange={(e) => {
             setKilometer(e.target.value);
-          }}
-        ></input>
-      </div>
-      <div className="input-group mb-3">
-        <span className="input-group-text" id="basic-addon1">
-          Car name
-        </span>
-        <input
-          type="text"
-          className="form-control"
-          aria-describedby="basic-addon1"
-          value={carName}
-          onChange={(e) => {
-            setCarName(e.target.value);
           }}
         ></input>
       </div>

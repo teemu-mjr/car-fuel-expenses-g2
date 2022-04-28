@@ -7,7 +7,7 @@ export const FuelingLog = () => {
 
   return (
     <div className="d-flex flex-column align-items-center text-center">
-      <h3>Fueling expenses log</h3>
+      <h1>Fueling expenses log</h1>
       {fuelingExpenses.length > 0 ? (
         <div style={{ minWidth: "200px", maxWidth: "500px", width: "50vw" }}>
           {fuelingExpenses.map((fuelingExpenses) => (

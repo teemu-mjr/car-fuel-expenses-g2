@@ -18,7 +18,7 @@ function App() {
               path="/"
               element={
                 <div className="d-md-flex justify-content-center flex-row m-3">
-                  <div className="d-flex flex-column align-items-center">
+                  <div className="d-flex flex-column align-items-center pb-3">
                     <FuelingTotal />
                     <AddExpense />
                   </div>
