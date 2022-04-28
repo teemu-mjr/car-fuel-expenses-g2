@@ -13,37 +13,35 @@ function App() {
     <GlobalProvider>
       <BrowserRouter>
         <NavBar />
-        <div className="App d-flex flex-column align-items-center">
+        <Container fluid className="App align-items-center">
           <Routes>
             <Route
               path="/"
               element={
-                <Container>
-                  <Row className="justify-content-md-center">
-                    <Col lg="auto">
-                      <FuelingTotal />
-                      <AddExpense />
-                    </Col>
-                    <Col lg="3">
-                      <History />
-                    </Col>
-                  </Row>
-                </Container>
+                <Row className="justify-content-md-center">
+                  <Col lg={4} md={true}>
+                    <FuelingTotal />
+                    <AddExpense />
+                  </Col>
+                  <Col lg={4} md={true}>
+                    <History />
+                  </Col>
+                </Row>
               }
             ></Route>
             <Route
               path="/log"
               element={
-                <div className="d-flex flex-row m-3">
-                  <div className="d-flex flex-column align-items-center">
+                <Row className="justify-content-md-center">
+                  <Col lg={5} md={true}>
                     <FuelingTotal />
                     <FuelingLog />
-                  </div>
-                </div>
+                  </Col>
+                </Row>
               }
             ></Route>
           </Routes>
-        </div>
+        </Container>
       </BrowserRouter>
     </GlobalProvider>
   );
