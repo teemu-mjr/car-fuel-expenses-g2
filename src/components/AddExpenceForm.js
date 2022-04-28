@@ -1,6 +1,6 @@
 import React,{ useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { Form, Col, InputGroup, Button} from "react-bootstrap";
+import { Form, Col, InputGroup, Button, Container, Stack} from "react-bootstrap";
 import { v4 as uuid } from "uuid";
 
 export const AddExpenseForm = () => {
@@ -31,8 +31,6 @@ export const AddExpenseForm = () => {
 
       createExpense(newExpence);
 
-      setValidated(false)
-
       clearFields()
     }
   };
@@ -42,12 +40,14 @@ export const AddExpenseForm = () => {
     setPrice("");
     setKilometer("");
     setCarName("");
+    setValidated(false);
   };
 
   return (
+  <Container>
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Col className="mb-3">
-        <Form.Group as={Col} md="4">
+        <Form.Group>
           <Form.Control
             required
             type="text"
@@ -58,7 +58,7 @@ export const AddExpenseForm = () => {
             }}
           />
         </Form.Group>
-        <Form.Group as={Col} md="4">
+        <Form.Group>
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -75,7 +75,7 @@ export const AddExpenseForm = () => {
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
-        <Form.Group as={Col} md="4">
+        <Form.Group>
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -92,7 +92,7 @@ export const AddExpenseForm = () => {
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
-        <Form.Group as={Col} md="4">
+        <Form.Group>
           <InputGroup hasValidation>
             <Form.Control
               required
@@ -103,15 +103,18 @@ export const AddExpenseForm = () => {
                 setLiter(e.target.value)
               }}
             />
-            <InputGroup.Text id="inputGroupPrepend">l</InputGroup.Text>
+            <InputGroup.Text>l</InputGroup.Text>
             <Form.Control.Feedback type="invalid">
               Input a valid amount
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>
       </Col>
-      <Button type="submit">Add</Button>
-      <Button onClick={() => {clearFields()}}>Clear</Button> 
+    <Stack gap={2}>
+      <Button variant="outline-info" type="submit">Add</Button>
+      <Button variant="outline-secondary" onClick={() => {clearFields()}}>Clear</Button> 
+    </Stack>
     </Form>
+   </Container>
   );
 }

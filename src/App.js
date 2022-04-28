@@ -6,6 +6,7 @@ import { AddExpense } from "./components/AddExpense";
 import { NavBar } from "./components/NavBar";
 import { History } from "./components/History";
 import { GlobalProvider } from "./context/GlobalState";
+import { Col, Container, Row } from "react-bootstrap";
 
 function App() {
   return (
@@ -17,15 +18,17 @@ function App() {
             <Route
               path="/"
               element={
-                <div className="d-md-flex justify-content-center flex-row m-3">
-                  <div className="d-flex flex-column align-items-center pb-3">
-                    <FuelingTotal />
-                    <AddExpense />
-                  </div>
-                  <div className="d-flex justify-content-center">
-                    <History />
-                  </div>
-                </div>
+                <Container>
+                  <Row className="justify-content-md-center">
+                    <Col lg="auto">
+                      <FuelingTotal />
+                      <AddExpense />
+                    </Col>
+                    <Col lg="3">
+                      <History />
+                    </Col>
+                  </Row>
+                </Container>
               }
             ></Route>
             <Route

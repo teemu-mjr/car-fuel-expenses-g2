@@ -24,10 +24,7 @@ export const History = () => {
   const carHistory = Object.values(arrayHashmap);
 
   return (
-    <div
-      style={{ minWidth: "200px", maxWidth: "400px", width: "30vw" }}
-      className="d-flex flex-column justify-content-center text-center"
-    >
+    <div className="text-center">
       <h1>History</h1>
       {carHistory.length > 0 ? (
         <div>
