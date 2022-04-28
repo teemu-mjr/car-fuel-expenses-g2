@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Card } from "react-bootstrap";
 import { GlobalContext } from "../context/GlobalState";
 
 export const FuelingTotal = () => {
@@ -20,32 +21,38 @@ export const FuelingTotal = () => {
   return (
     <div>
       <div className="d-flex justify-content-center flex-row">
-        <div className="card bg-dark text-center m-2">
-          <div className="card-header text-light">Total liters</div>
-          <p className="card-text text-info">{calculateTotal().liter} </p>
-        </div>
-        <div className="card bg-dark text-center m-2">
-          <div className="card-header text-light">Total price</div>
-          <p className="card-text text-info">{calculateTotal().price} €</p>
-        </div>
-        <div className="card bg-dark text-center m-2">
-          <div className="card-header text-light">Total kilometers</div>
-          <p className="card-text text-info">{calculateTotal().kilometer} km</p>
-        </div>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header>Total liters</Card.Header>
+          <Card.Text className="text-info">{calculateTotal().liter} </Card.Text>
+        </Card>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header className="text-light">Total price</Card.Header>
+          <Card.Text className="text-info">{calculateTotal().price} €</Card.Text>
+        </Card>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header className="text-light">Total kilometers</Card.Header>
+          <Card.Text className="text-info">{calculateTotal().kilometer} km</Card.Text>
+        </Card>
       </div>
       <div className="d-flex justify-content-center flex-row">
-        <div className="card bg-dark text-center m-2">
-          <div className="card-header text-light">Average Km/l</div>
-          <p className="card-text text-info">
-            {(calculateTotal().kilometer / calculateTotal().liter).toFixed(2)}
-          </p>
-        </div>
-        <div className="card bg-dark text-center m-2">
-          <div className="card-header text-light">Average €/l</div>
-          <p className="card-text text-info">
-            {(calculateTotal().price / calculateTotal().liter).toFixed(2)}
-          </p>
-        </div>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header className="text-light">Average L/100km</Card.Header>
+          <Card.Text className="text-info">
+            {((calculateTotal().liter / calculateTotal().kilometer * 100)).toFixed(2)} L
+          </Card.Text>
+        </Card>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header className="text-light">Avg price per liter</Card.Header>
+          <Card.Text className="text-info">
+            {(calculateTotal().price / calculateTotal().liter).toFixed(2)} €
+          </Card.Text>
+        </Card>
+        <Card bg="dark" className="text-center m-2">
+          <Card.Header className="text-light">Avg price per 100km</Card.Header>
+          <Card.Text className="text-info">
+            {(calculateTotal().price / calculateTotal().kilometer * 100).toFixed(2)} €
+          </Card.Text>
+        </Card>
       </div>
     </div>
   );

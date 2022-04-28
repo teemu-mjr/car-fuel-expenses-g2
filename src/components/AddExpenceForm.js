@@ -63,23 +63,6 @@ export const AddExpenseForm = () => {
             <Form.Control
               required
               type="number"
-              placeholder="Price"
-              value={price}
-              onChange={(e) => {
-                setPrice(e.target.value)
-              }}
-            />
-            <InputGroup.Text id="inputGroupPrepend">€</InputGroup.Text>
-            <Form.Control.Feedback type="invalid">
-              Input a valid price
-            </Form.Control.Feedback>
-          </InputGroup>
-        </Form.Group>
-        <Form.Group>
-          <InputGroup hasValidation>
-            <Form.Control
-              required
-              type="number"
               placeholder="Kilometers"
               value={kilometer}
               onChange={(e) => {
@@ -89,6 +72,23 @@ export const AddExpenseForm = () => {
             <InputGroup.Text id="inputGroupPrepend">Km</InputGroup.Text>
             <Form.Control.Feedback type="invalid">
               Input a valid amount
+            </Form.Control.Feedback>
+          </InputGroup>
+        </Form.Group>
+        <Form.Group>
+          <InputGroup hasValidation>
+            <Form.Control
+              required
+              type="number"
+              placeholder="Price"
+              value={price}
+              onChange={(e) => {
+                setPrice(e.target.value)
+              }}
+            />
+            <InputGroup.Text id="inputGroupPrepend">€</InputGroup.Text>
+            <Form.Control.Feedback type="invalid">
+              Input a valid price
             </Form.Control.Feedback>
           </InputGroup>
         </Form.Group>

@@ -14,45 +14,53 @@ export const FuelingExpense = ({ fuelingExpenses, byName = false }) => {
         <Container>
           <Row>
             <Col>
-              <p>Price: </p>
+              <p>Price</p>
             </Col>
             <Col>
-              <p className="text-info">{fuelingExpenses.price}</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-            <p>Kilometers: </p>
-            </Col>
-            <Col>
-            <p className="text-info">{fuelingExpenses.kilometer}</p>
+              <p className="text-info">{fuelingExpenses.price} €</p>
             </Col>
           </Row>
           <Row>
             <Col>
-            <p>Liters: </p>
+            <p>Kilometers</p>
             </Col>
             <Col>
-            <p className="text-info">{fuelingExpenses.liter}</p>
+            <p className="text-info">{fuelingExpenses.kilometer} km</p>
             </Col>
           </Row>
           <Row>
             <Col>
-            <p>Km/L: </p>
+            <p>Liters</p>
+            </Col>
+            <Col>
+            <p className="text-info">{fuelingExpenses.liter} L</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <p>Gas price</p>
+            </Col>
+            <Col>
+            <p className="text-info">{(fuelingExpenses.price / fuelingExpenses.liter).toFixed(2)} €</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+            <p>L/100km</p>
             </Col>
             <Col>
             <p className="text-info">
-              {(fuelingExpenses.kilometer / fuelingExpenses.liter).toFixed(2)}
+              {((fuelingExpenses.liter / fuelingExpenses.kilometer * 100)).toFixed(2)} L
             </p>
             </Col>
           </Row>
           <Row>
             <Col>
-            <p>Price/Km: </p>
+            <p>€/100km</p>
             </Col>
             <Col>
             <p className="text-info">
-              {(fuelingExpenses.price / fuelingExpenses.kilometer).toFixed(4)}
+              {(fuelingExpenses.price / fuelingExpenses.kilometer * 100).toFixed(2)} €
             </p>
             </Col>
           </Row>
